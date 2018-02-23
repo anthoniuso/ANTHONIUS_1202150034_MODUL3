@@ -4,4 +4,56 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Log In</string>
+    <string name="title_placeholder">Judul</string>
+    <string name="water_info_placeholder">Ini adalah air minum</string>
+    <string name="filler_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+        vitae semper quam. In a metus ut nisl pharetra hendrerit et a leo. Curabitur nec sapien
+        odio. Vestibulum a mollis felis. Cras molestie felis nibh, ut maximus mauris feugiat
+        tincidunt. Curabitur ultricies eros sed ipsum pulvinar vehicula. Maecenas volutpat,
+        massa sit amet aliquam eleifend, massa lorem tempor sapien, eget finibus massa dolor
+        molestie lorem. Suspendisse at purus mauris. Proin nibh ligula, suscipit vel pharetra
+        posuere, bibendum id lorem.</string>
+
+    <string-array name="water_titles">
+        <item>Ades</item>
+        <item>Amidis</item>
+        <item>Aqua</item>
+        <item>Cleo</item>
+        <item>Club</item>
+        <item>Equil</item>
+        <item>Evian</item>
+        <item>Le Minerale</item>
+        <item>Nestle</item>
+        <item>Pristine</item>
+        <item>Vit</item>
+    </string-array>
+
+    <string-array name="waters_info">
+        <item>Ini adalah air minum merk Ades</item>
+        <item>Ini adalah air minum merk Amidis</item>
+        <item>Ini adalah air minum merk Aqua</item>
+        <item>Ini adalah air minum merk Cleo</item>
+        <item>Ini adalah air minum merk Club</item>
+        <item>Ini adalah air minum merk Equil</item>
+        <item>Ini adalah air minum merk Evian</item>
+        <item>Ini adalah air minum merk Le Minerale</item>
+        <item>Ini adalah air minum merk Nestle</item>
+        <item>Ini adalah air minum merk Pristine</item>
+        <item>Ini adalah air minum merk Vit</item>
+    </string-array>
+
+    <array name="image_water">
+        <item>@drawable/ades</item>
+        <item>@drawable/amidis</item>
+        <item>@drawable/aqua</item>
+        <item>@drawable/cleo</item>
+        <item>@drawable/club</item>
+        <item>@drawable/equil</item>
+        <item>@drawable/evian</item>
+        <item>@drawable/leminerale</item>
+        <item>@drawable/nestle</item>
+        <item>@drawable/pristine</item>
+        <item>@drawable/vit</item>
+    </array>
+
 </resources>

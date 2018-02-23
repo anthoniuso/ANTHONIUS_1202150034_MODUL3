@@ -3,7 +3,6 @@ package com.levegra.anthonius_1202150034_modul3;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,11 +24,10 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("LOGIN", "Masuk ke button");
-                Log.d("Text", mUsername.getText().toString() + " Usernamenya");
-                Log.d("Text", mPassword.getText().toString() + " Passwordnya");
                 if(mUsername.getText().toString().equals("EAD") && mPassword.getText().toString().equals("MOBILE")) {
                     Intent i = new Intent(LoginActivity.this, MainActivity.class);
+
+                    i.putExtra("login_success","Login Berhasil");
                     startActivity(i);
 
                     // close this activity
