@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ANTHONIUS_1202150034_MODUL3</string>
     <string name="logo">Logo</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Log In</string>
 </resources>
