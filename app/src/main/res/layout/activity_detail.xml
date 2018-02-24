@@ -36,6 +36,46 @@
             android:layout_below="@id/titleDetail"
             android:padding="@dimen/activity_horizontal_margin"
             android:text="@string/filler_text" />
+
+        <ImageView
+            android:id="@+id/galon"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_below="@id/subTitleDetail"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:src="@drawable/ic_battery" />
+
+        <LinearLayout
+            android:layout_below="@id/galon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="decreaseVal"
+                android:contentDescription="@string/button_minus"
+                android:src="@drawable/ic_minus"/>
+
+            <TextView
+                android:id="@+id/water_count"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inital_litre"/>
+
+            <ImageButton
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="increaseVal"
+                android:contentDescription="@string/button_plus"
+                android:src="@drawable/ic_plus"/>
+        </LinearLayout>
     </RelativeLayout>
+
 
 </ScrollView>

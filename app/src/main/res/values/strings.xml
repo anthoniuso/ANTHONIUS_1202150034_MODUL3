@@ -5,6 +5,9 @@
     <string name="password">Password</string>
     <string name="login">Log In</string>
     <string name="title_placeholder">Judul</string>
+    <string name="inital_litre">0 L</string>
+    <string name="button_minus">Tombol Minus</string>
+    <string name="button_plus">Tombol Plus</string>
     <string name="water_info_placeholder">Ini adalah air minum</string>
     <string name="filler_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
         vitae semper quam. In a metus ut nisl pharetra hendrerit et a leo. Curabitur nec sapien
