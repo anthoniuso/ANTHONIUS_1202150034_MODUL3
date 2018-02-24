@@ -3,7 +3,7 @@ package com.levegra.anthonius_1202150034_modul3;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
@@ -26,9 +26,11 @@ public class MainActivity extends AppCompatActivity {
         //Initialize the RecyclerView
         mRecyclerView = (RecyclerView)findViewById(R.id.recyclerView);
 
-        //Set the Layout Manager
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //Get the appropriate column count
+        int gridColumnCount = getResources().getInteger(R.integer.grid_column_count);
 
+        //Set the Layout Manager
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this, gridColumnCount));
 
         //Initialize the ArrayList that will contain the data
         mWaterData = new ArrayList<>();
@@ -40,18 +42,19 @@ public class MainActivity extends AppCompatActivity {
         //Get the data
         initializeData();
 
+        // If there is more than one column, disable swipe to dismiss
+        int swipeDirs;
+        if(gridColumnCount > 1){
+            swipeDirs = 0;
+        } else {
+            swipeDirs = ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
+        }
+
         //Helper class for creating swipe to dismiss and drag and drop functionality
         ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback
                 (ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT | ItemTouchHelper.DOWN
-                        | ItemTouchHelper.UP, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+                        | ItemTouchHelper.UP, swipeDirs) {
 
-            /**
-             * Method that defines the drag and drop functionality
-             * @param recyclerView The RecyclerView that contains the list items
-             * @param viewHolder The SportsViewHolder that is being moved
-             * @param target The SportsViewHolder that you are switching the original one with.
-             * @return returns true if the item was moved, false otherwise
-             */
             @Override
             public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder,
                                   RecyclerView.ViewHolder target) {
@@ -66,11 +69,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
 
-            /**
-             * Method that defines the swipe to dismiss functionality
-             * @param viewHolder The viewholder being swiped
-             * @param direction The direction it is swiped in
-             */
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
 
@@ -112,10 +110,6 @@ public class MainActivity extends AppCompatActivity {
         mAdapter.notifyDataSetChanged();
     }
 
-    /**
-     * onClick method for th FAB that resets the data
-     * @param view The button view that was clicked
-     */
     public void resetWaters(View view) {
         initializeData();
     }
